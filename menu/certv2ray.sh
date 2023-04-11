@@ -4,6 +4,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 clear
 # Getting
+STOPWEBSERVER=$(lsof -i:80 | cut -d' ' -f1 | awk 'NR==2 {print $1}')
 domain=$(cat /etc/xray/domain)
 red='\e[1;31m'
 green='\e[0;32m'
@@ -16,68 +17,8 @@ systemctl enable xray@v2ray-nontls
 systemctl enable xray@vless-tls
 systemctl enable xray@vless-nontls
 systemctl enable xray@trojan
-echo -e "[ ${green}INFO${NC} ] Processing 10 second to stop port 80 " 
-sleep 2
-echo -e "1"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "2"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "3"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "4"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "5"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "6"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "7"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "8"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "9"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "10"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "11"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "12"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "13"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "14"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "15"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "16"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "17"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "18"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "19"
-sudo fuser -k 80/tcp
-sleep 0.2
-echo -e "20"
-sudo fuser -k 80/tcp
-sleep 0.2
+systemctl stop $STOPWEBSERVER
+systemctl stop nginx
 echo -e "[ ${green}INFO${NC} ] Starting renew cert... " 
 sleep 2
 /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
@@ -87,5 +28,6 @@ systemctl restart xray@v2ray-nontls
 systemctl restart xray@vless-tls
 systemctl restart xray@vless-nontls
 systemctl restart xray@trojan
+systemctl restart nginx
 echo -e "[ ${green}INFO${NC} ] All finished... " 
 sleep 0.5
