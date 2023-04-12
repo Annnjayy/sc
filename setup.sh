@@ -58,8 +58,16 @@ apt install zlib1g-dev -y
 apt install libssl-dev -y
 apt install libssl1.0-dev -y
 apt install dos2unix -y
+# info script install
+if [ -f "/etc/.s/log-install.txt" ]; then
+echo -e "===============================" | lolcat
+echo -e "   Script Already Installed"
+echo -e "===============================" | lolcat
+exit 0
+fi
+# Install script
 echo "====================================" | lolcat
-echo "       Installing AutoScript            "
+echo "     Installing AutoScript            "
 echo "====================================" | lolcat
 sleep 2
 echo -e "[ ${green}INFO${NC} ] Starting Install Script.... " 
@@ -74,13 +82,6 @@ service="raw.githubusercontent.com/Annnjayy/sc/main/service"
 menu="raw.githubusercontent.com/Annnjayy/sc/main/menu"
 #Link Hosting Kalian Untuk Install
 instal="raw.githubusercontent.com/Annnjayy/sc/main/install"
-# info script install
-if [ -f "/etc/.s/log-install.txt" ]; then
-echo -e "===============================" | lolcat
-echo -e "    Script Already Installed"
-echo -e "===============================" | lolcat
-exit 0
-fi
 # Nama pengguna
 mkdir .s
 mkdir /etc/xray
@@ -94,12 +95,51 @@ echo "IP=" >> /var/lib/crot/ipvps.conf
 # install cloudflare certificate
 echo -e "[ ${green}INFO${NC} ] Starting Getting Cert... "
 sleep 2
-wget https://${service}/cf.sh
-bash cf.sh
-echo -e "[ ${green}INFO${NC} ] Starting Install Cert "
-sleep 2
-wget https://${menu}/certv2ray.sh
-bash certv2ray.sh
+function add_dm() {
+    echo -e "===============================" | lolcat
+    echo "1. Use Domain From Script / Gunakan Domain Dari Script"
+    echo "2. Choose Your Own Domain / Pilih Domain Sendiri"
+    echo -e "===============================" | lolcat
+    read -rp "Choose Your Domain Installation : " dom 
+
+    if test $dom -eq 1; then
+    clear
+    apt install jq curl -y
+    wget -q -O /root/.s/cf "${service}/cf" >/dev/null 2>&1
+    chmod +x /root/.s/cf
+    bash /root/.s/cf | tee /root/install.log
+    print_success "DomainAll"
+    elif test $dom -eq 2; then
+    read -rp "Enter Your Domain : " domen 
+    echo $domen > /root/domain
+    mv /root/domain /etc/xray/domain
+    else 
+    echo "Not Found Argument"
+    exit 1
+    fi
+    echo -e "${GREEN}Done!${NC}"
+    sleep 2
+    clear
+}
+function ins_ssl() {
+    print_install "Memasang SSL pada domain"
+    domain=$(cat /root/domain)
+    STOPWEBSERVER=$(lsof -i:80 | cut -d' ' -f1 | awk 'NR==2 {print $1}')
+    rm -rf /root/.acme.sh
+    mkdir /root/.acme.sh
+    systemctl stop $STOPWEBSERVER
+    systemctl stop nginx
+    curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
+    chmod +x /root/.acme.sh/acme.sh
+    /root/.acme.sh/acme.sh --upgrade --auto-upgrade
+    /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
+    /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
+    ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
+    chmod 777 /etc/xray/xray.key
+    print_success "SSL Certificate"
+}
+add_dm
+ins_ssl
 # install xray
 echo -e "[ ${green}INFO${NC} ] Starting Install Xray "
 sleep 2
@@ -196,7 +236,6 @@ cd /root
 mv log-install.txt /root/.s/
 mv domain /root/.s/
 rm -f /root/nscf.sh
-rm -f /root/certv2ray.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/ins-xray.sh
 rm -f /root/openvpn.sh
