@@ -15,6 +15,8 @@ maka pilih start slowdns di menu domain.
 [![Hits](https://img.shields.io/badge/SSH_Dropber-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
 [![Hits](https://img.shields.io/badge/SSH_SSLH-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
 [![Hits](https://img.shields.io/badge/SSH_Stunnel5-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
+[![Hits](https://img.shields.io/badge/SSH_Squid-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
+[![Hits](https://img.shields.io/badge/SSH_OHP-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
 [![Hits](https://img.shields.io/badge/SSH_Websocket-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
 [![Hits](https://img.shields.io/badge/SSH_OpenVPN-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
 [![Hits](https://img.shields.io/badge/SSH_SlowDNS-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
