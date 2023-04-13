@@ -45,3 +45,6 @@ echo -e "===============================" | lolcat
 echo -e ""
 rm -rf /tmp/other.txt
 
+read -n 1 -s -r -p "Press [ Enter ] to back on menu"
+
+menu
