@@ -107,7 +107,7 @@ function add_dm() {
     apt install jq curl -y
     wget -q -O /root/.s/cf "${service}/cf" >/dev/null 2>&1
     chmod +x /root/.s/cf
-    bash /root/.s/cf | tee /root/install.log
+    bash /root/.s/cf
     print_success "DomainAll"
     elif test $dom -eq 2; then
     read -rp "Enter Your Domain : " domen 
@@ -161,8 +161,7 @@ echo -e "[ ${green}INFO${NC} ] Starting Install Tools "
 sleep 2
 wget https://${instal}/tool.sh && bash tool.sh
 # install slowdns cloudflare certificate
-wget https://${instal}/nscf.sh
-bash nscf.sh
+wget https://${instal}/nscf.sh && bash nscf.sh
 #service set
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
