@@ -23,11 +23,11 @@ maka pilih start slowdns di menu domain.
 [![Hits](https://img.shields.io/badge/XRAY_VLESS-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
 [![Hits](https://img.shields.io/badge/XRAY_VMESS-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
 [![Hits](https://img.shields.io/badge/XRAY_TROJAN-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
-# Update
+# Update System
 ````
 apt update -y && apt upgrade -y && update-grub && sleep 2 && reboot
 ````
-# Install
+# Install Script
 ````
 apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/Annnjayy/sc/main/setup.sh && bash setup.sh
 ````
@@ -47,13 +47,13 @@ apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://ra
 
  OpenVPN                   : TCP 1194, UDP 2200, SSL 990
 
- Websocket SSH TLS         : 443, 445, 777
+ SSH TLS                   : 443, 445, 777
 
- Websocket SSH WS TLS      : 443 [MAINTENANCE]
+ SSH WS TLS                : 443 [MAINTENANCE]
 
- Websocket SSH WS NTLS     : 8880
+ SSH WS NTLS               : 8880
 
- Websocket OpenVPN         : 2086
+ WS OpenVPN                : 2086
 
  Squid Proxy               : 3128, 8080
 
@@ -63,11 +63,11 @@ apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://ra
 
  XRAYS Vmess TLS           : 8443
 
- XRAYS Vmess None TLS      : 80
+ XRAYS Vmess NTLS          : 80
 
  XRAYS Vless TLS           : 2083
 
- XRAYS Vless None TLS      : 2095
+ XRAYS Vless NTLS          : 2095
 
  XRAYS Trojan              : 2087
 
@@ -80,9 +80,6 @@ apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://ra
  OHP OpenVPN               : 8383
 
  SlowDNS                   : [ON]
-
- CloudFront Over Websocket : [OFF]
-
 
  ### Server Information & Other Features
 
