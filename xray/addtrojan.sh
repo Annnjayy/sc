@@ -65,3 +65,7 @@ echo -e "    Menggunakan Layanan Kami "
 echo -e ""
 echo -e "===============================" | lolcat
 echo -e ""
+
+read -n 1 -s -r -p "Press [ Enter ] to back on menu"
+
+menu
