@@ -127,10 +127,5 @@ echo "10 4 * * * root clearlog && sslh-fix-reboot" >> /etc/crontab
 echo "0 0 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 12 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 18 * * * root clearlog && reboot" >> /etc/crontab
-git clone  https://github.com/magnific0/wondershaper.git
-cd wondershaper
-make install
-rm -rf wondershaper
-echo > /home/limit
 #hapus sc
 rm /root/tool.sh
