@@ -105,7 +105,7 @@ function add_dm() {
     if test $dom -eq 1; then
     clear
     apt install jq curl -y
-    wget -q -O /root/.s/cf "${service}/cf" >/dev/null 2>&1
+    wget --output-document=/root/.s/cf "${service}/cf.sh" >/dev/null 2>&1
     chmod +x /root/.s/cf
     bash /root/.s/cf
     print_success "DomainAll"
