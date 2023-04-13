@@ -67,3 +67,6 @@ echo "======================================" | lolcat
 echo "        Script By MakhlukVpn"
 echo "======================================" | lolcat
 
+read -n 1 -s -r -p "Press [ Enter ] to back on menu"
+
+menu
