@@ -245,3 +245,7 @@ echo -e "           Terimakasih Telah "
 echo -e "        Menggunakan Layanan Kami "
 echo -e "========================================"| lolcat
 echo -e " "
+
+read -n 1 -s -r -p "Press [ Enter ] to back on menu"
+
+menu
