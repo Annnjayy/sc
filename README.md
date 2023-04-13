@@ -8,6 +8,19 @@ restart service dan Renew Certificate xray
  Dan jikalau slowdns nya ga berfungsi
 maka pilih start slowdns di menu domain.
 
+</h2>
+<h2 align="center">Protokol Tunneling SSH</h2>
+
+[![Hits](https://img.shields.io/badge/SSH_OpenSSH-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
+[![Hits](https://img.shields.io/badge/SSH_Dropber-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
+[![Hits](https://img.shields.io/badge/SSH_SSLH-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
+[![Hits](https://img.shields.io/badge/SSH_Stunnel5-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
+[![Hits](https://img.shields.io/badge/SSH_Websocket-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
+[![Hits](https://img.shields.io/badge/SSH_OpenVPN-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
+[![Hits](https://img.shields.io/badge/SSH_SlowDNS-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
+[![Hits](https://img.shields.io/badge/XRAY_VLESS-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
+[![Hits](https://img.shields.io/badge/XRAY_VMESS-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
+[![Hits](https://img.shields.io/badge/XRAY_TROJAN-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white&edge_flat=false)](https://github.com/Annnjayy/sc)
 # Update
 ````
 apt update -y && apt upgrade -y && update-grub && sleep 2 && reboot
