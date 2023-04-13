@@ -31,3 +31,7 @@ systemctl restart xray@trojan
 systemctl restart nginx
 echo -e "[ ${green}INFO${NC} ] All finished... " 
 sleep 0.5
+
+read -n 1 -s -r -p "Press [ Enter ] to back on menu"
+
+menu
