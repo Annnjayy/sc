@@ -59,7 +59,7 @@ echo -e " 2}.$green Stop Limit"
 echo -e " 3}.$green Back To Menu"
 echo -e " x}.$red Exit"
 echo -e "===============================" | lolcat
-read -rp "Please Input Number [1-2 or [x] ] : " -e num
+read -rp "Please Input Number [1-3 or [x] ] : " -e num
 echo -e "===============================" | lolcat
 if [[ "$num" = "1" ]]; then
 start
