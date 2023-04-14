@@ -123,7 +123,7 @@ function add_dm() {
 }
 function ins_ssl() {
     print_install "Memasang SSL pada domain"
-    domain=$(cat /root/domain)
+    domain=$(cat /etc/xray/domain)
     STOPWEBSERVER=$(lsof -i:80 | cut -d' ' -f1 | awk 'NR==2 {print $1}')
     rm -rf /root/.acme.sh
     mkdir /root/.acme.sh
