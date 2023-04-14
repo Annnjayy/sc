@@ -2,11 +2,8 @@
 
  Disarankan kalau sudah install scriptnya
 lihat dulu service runningnya di menu info script,
-lihat ada yang error gak, kalau ada yang error
-restart service dan Renew Certificate xray
-
- Dan jikalau slowdns nya ga berfungsi
-maka pilih start slowdns di menu domain.
+lihat ada yang error gak, kalau ada yang error,
+Renew Certificate xray dan Restart Service.
 
 </h2>
 <h2 align="center">Protokol Tunneling SSH</h2>
