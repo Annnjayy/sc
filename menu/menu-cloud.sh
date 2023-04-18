@@ -18,10 +18,11 @@ exit 0
 fi
 clear
 echo -e "===============================" | lolcat
-echo -e "     ⇱ Menu Cloud Manager ⇲ "        
+echo -e "     ⇱ Menu Vps Manager ⇲ "        
 echo -e "===============================" | lolcat
 echo -e " 1}. Backup Data VPS"
 echo -e " 2}. Restore Data VPS"
+echo -e " 2}. Info Load Vps"
 echo -e " 3}. Menu"
 echo -e " 4}. Exit"
 echo -e ""
@@ -37,9 +38,14 @@ backup
 restore
 ;;
 3)
+gotop
+read -n 1 -s -r -p "Press [ Enter ] to back on menu"
 menu
 ;;
 4)
+menu
+;;
+5)
 exit
 ;;
 esac
