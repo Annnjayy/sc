@@ -5,7 +5,7 @@ lihat dulu service runningnya di menu info script,
 lihat ada yang error gak, kalau ada yang error,
 Renew Certificate xray dan Restart Service.
 
-Please Contact Admin!!
+Please Contact Admin!! For Izin Ip Vps!!
 Telegram : https://t.me/MakhlukVpn
 </h2>
 <h2 align="center">Protokol Tunneling SSH</h2>
