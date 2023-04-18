@@ -36,7 +36,7 @@ chmod +x /usr/local/bin/ws-ovpn
 cat > /etc/systemd/system/ws-nontls.service << END
 [Unit]
 Description=SSH Websocket By MakhlukVpn
-Documentation=https://nekopi.care
+Documentation=https://t.me/MakhlukVpn
 After=network.target nss-lookup.target
 
 [Service]
@@ -60,7 +60,7 @@ systemctl restart ws-nontls
 cat > /etc/systemd/system/ws-tls.service << END
 [Unit]
 Description=SSH Websocket By MakhlukVpn
-Documentation=https://nekopoi.care
+Documentation=https://t.me/MakhlukVpn
 After=network.target nss-lookup.target
 
 [Service]
@@ -84,7 +84,7 @@ systemctl restart ws-tls
 cat > /etc/systemd/system/ws-ovpn.service << END
 [Unit]
 Description=  Websocket OpenVPN By MakhlukVpn
-Documentation=https://nekopoi.care
+Documentation=https://t.me/MakhlukVpn
 After=network.target nss-lookup.target
 
 [Service]
