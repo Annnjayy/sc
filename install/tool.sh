@@ -120,12 +120,5 @@ chmod +x renewvless
 chmod +x renewtrojan
 chmod +x renewtrgo
 chmod +x certv2ray
-#fix
-echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
-echo "0 0 * * * root xp" >> /etc/crontab
-echo "10 4 * * * root clearlog && sslh-fix-reboot" >> /etc/crontab
-echo "0 0 * * * root clearlog && reboot" >> /etc/crontab
-echo "0 12 * * * root clearlog && reboot" >> /etc/crontab
-echo "0 18 * * * root clearlog && reboot" >> /etc/crontab
 #hapus sc
 rm /root/tool.sh
