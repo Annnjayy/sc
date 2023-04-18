@@ -111,6 +111,7 @@ function add_cert(){
     /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
     /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
     ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /usr/local/etc/xray/xray.crt --keypath /usr/local/etc/xray/xray.key --ecc
+    chmod 777 /etc/xray/xray.key
     systemctl restart xray@v2ray-tls
     systemctl restart xray@v2ray-nontls
     systemctl restart xray@vless-tls
