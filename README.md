@@ -5,8 +5,8 @@ lihat dulu service runningnya di menu info script,
 lihat ada yang error gak, kalau ada yang error,
 Renew Certificate xray dan Restart Service.
 
-echo -e "[ ${green}INFO${NC} ] Please Contact Admin!!"
-echo -e "[ ${green}INFO${NC} ] Telegram : https://t.me/MakhlukVpn"
+Please Contact Admin!!
+Telegram : https://t.me/MakhlukVpn
 </h2>
 <h2 align="center">Protokol Tunneling SSH</h2>
 
