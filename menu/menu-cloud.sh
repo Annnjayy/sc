@@ -22,13 +22,13 @@ echo -e "     ⇱ Menu Vps Manager ⇲ "
 echo -e "===============================" | lolcat
 echo -e " 1}. Backup Data VPS"
 echo -e " 2}. Restore Data VPS"
-echo -e " 2}. Info Load Vps"
-echo -e " 3}. Menu"
-echo -e " 4}. Exit"
+echo -e " 3}. Info Load Vps"
+echo -e " 4}. Menu"
+echo -e " x}. Exit"
 echo -e ""
 echo -e ""
 echo -e "===============================" | lolcat
-read -p "    Select From Options [ 1 - 3 or [x] ] : " menu
+read -p "    Select From Options [ 1 - 4 or [x] ] : " menu
 echo -e "===============================" | lolcat
 case $menu in
 1)
@@ -45,7 +45,7 @@ menu
 4)
 menu
 ;;
-5)
+x)
 exit
 ;;
 esac
