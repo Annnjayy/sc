@@ -206,7 +206,7 @@ fi
 #info
 cat /root/.s/log-install.txt
 echo -e "========================================"| lolcat
-echo -e "    ⇱ Time Information ⇲"
+echo -e "          ⇱ Time Information ⇲"
 echo -e "========================================"| lolcat
 echo -e "Location    : $COUNTRY"
 echo -e "Time Zone   : $WAKTU"
