@@ -120,5 +120,12 @@ chmod +x renewvless
 chmod +x renewtrojan
 chmod +x renewtrgo
 chmod +x certv2ray
+# limit
+git clone  https://github.com/magnific0/wondershaper.git
+cd wondershaper
+make install
+cd
+rm -rf wondershaper
+echo > /home/limit
 #hapus sc
 rm /root/tool.sh
