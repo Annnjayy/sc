@@ -21,7 +21,7 @@ clear
 NAMAISP=$( curl -s ipinfo.io/org | cut -d " " -f 2-10  )
 COUNTRY=$( curl -s ipinfo.io/country )
 Name="$(cat /root/.s/pengguna)"
-Kata="$(cat https://raw.githubusercontent.com/Annnjayy/sc/main/service/kata)"
+Kata="$(curl https://raw.githubusercontent.com/Annnjayy/sc/main/service/kata)"
 # os
 source /etc/os-release
 Versi_OS=$VERSION
