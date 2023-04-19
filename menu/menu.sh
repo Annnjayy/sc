@@ -21,6 +21,7 @@ clear
 NAMAISP=$( curl -s ipinfo.io/org | cut -d " " -f 2-10  )
 COUNTRY=$( curl -s ipinfo.io/country )
 Name="$(cat /root/.s/pengguna)"
+Kata="$(cat https://raw.githubusercontent.com/Annnjayy/sc/main/service/kata)"
 # os
 source /etc/os-release
 Versi_OS=$VERSION
@@ -85,6 +86,7 @@ echo -e "=====================================" | lolcat
 echo -e "        Script By MakhlukVpn      "
 echo -e "=====================================" | lolcat
 echo -e ""
+echo -e " Quote : $Kata"
 echo -e ""
 echo -e "=====================================" | lolcat
 read -p " Please Input Number  [1-10 or [x] ] :  "  menu
