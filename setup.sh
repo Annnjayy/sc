@@ -97,8 +97,8 @@ echo -e "[ ${green}INFO${NC} ] Starting Getting Cert... "
 sleep 2
 function add_dm() {
     echo -e "===============================" | lolcat
-    echo "1. Use Domain From Script / Gunakan Domain Dari Script"
-    echo "2. Choose Your Own Domain / Pilih Domain Sendiri"
+    echo "1. Gunakan Domain Dari Script (recommended)"
+    echo "2. Gunakan Domain Sendiri"
     echo -e "===============================" | lolcat
     read -rp "Choose Your Domain Installation : " dom 
 
