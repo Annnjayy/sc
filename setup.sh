@@ -85,6 +85,7 @@ instal="raw.githubusercontent.com/Annnjayy/sc/main/install"
 # Nama pengguna
 mkdir .s
 mkdir /etc/xray
+mkdir /usr/local/etc/xray
 echo -e "===============================" | lolcat
 read -rp " Nama/Pengguna : " -e nama
 echo -e "===============================" | lolcat
