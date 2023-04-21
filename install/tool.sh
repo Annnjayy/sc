@@ -123,6 +123,7 @@ chmod +x certv2ray
 # limit
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
+git pull 
 make install
 cd
 rm -rf wondershaper
