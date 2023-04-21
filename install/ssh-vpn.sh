@@ -334,10 +334,6 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
-# Install BBR
-wget https://${service}/bbr.sh
-bash bbr.sh
-
 # Ganti Banner
 wget --output-document=/etc/issue.net "https://${service}/issue.net"
 
@@ -371,7 +367,6 @@ apt autoremove -y
 cd
 chown -R www-data:www-data /home/vps/public_html
 /etc/init.d/nginx restart
-/etc/init.d/openvpn restart
 /etc/init.d/cron restart
 /etc/init.d/ssh restart
 /etc/init.d/dropbear restart
