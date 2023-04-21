@@ -60,6 +60,7 @@ apt install libssl-dev -y
 apt install libssl1.0-dev -y
 apt install dos2unix -y
 dpkg --configure -a
+apt --fix-broken install
 # info script install
 if [ -f "/etc/.s/log-install.txt" ]; then
 echo -e "===============================" | lolcat
