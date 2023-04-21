@@ -150,20 +150,20 @@ wget https://${instal}/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 echo -e "[ ${green}INFO${NC} ] Starting Install All Service "
 sleep 2
 wget https://${instal}/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+# Ohp Server
+wget https://${instal}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+# install openvpn + slowdns
+wget https://${instal}/openvpn.sh && bash openvpn.sh
+# install slowdns cloudflare certificate
+wget https://${instal}/nscf.sh && bash nscf.sh
 # Websocket
 echo -e "[ ${green}INFO${NC} ] Starting Install SSH Ws & OpenVPN & OHP "
 sleep 2
 wget https://${instal}/ssh-ws.sh && chmod +x ssh-ws.sh && ./ssh-ws.sh
-# Ohp Server
-wget https://${instal}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
-# install openvpn
-wget https://${instal}/openvpn.sh && bash openvpn.sh
 # install tool
 echo -e "[ ${green}INFO${NC} ] Starting Install Tools "
 sleep 2
 wget https://${instal}/tool.sh && bash tool.sh
-# install slowdns cloudflare certificate
-wget https://${instal}/nscf.sh && bash nscf.sh
 # pasang gotop
 gotop_latest="$(curl -s https://api.github.com/repos/xxxserxxx/gotop/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
 gotop_link="https://github.com/xxxserxxx/gotop/releases/download/v$gotop_latest/gotop_v"$gotop_latest"_linux_amd64.deb"
