@@ -38,6 +38,7 @@ apt upgrade -y
 apt dist-upgrade -y
 apt-get remove --purge ufw firewalld -y
 apt install lolcat -y
+apt install socat -y
 # Install Requirements Tools
 apt install openssl iptables iptables-persistent -y
 apt-get install ncurses-utils -y
