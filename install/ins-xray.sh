@@ -57,7 +57,7 @@ chmod +x /usr/local/bin/xray
 # Make Folder XRay
 mkdir -p /var/log/xray/
 MYIP=$(wget -qO- ipinfo.io/ip);
-domain=$(cat /xray/domain)
+domain=$(cat /etc/xray/domain)
 #service squid start >/dev/null 2>&1
 service squid start
 uuid=$(cat /proc/sys/kernel/random/uuid)
