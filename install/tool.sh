@@ -128,5 +128,6 @@ make install
 cd
 rm -rf wondershaper
 echo > /home/limit
+sudo apt install wondershaper
 #hapus sc
 rm /root/tool.sh
