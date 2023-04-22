@@ -28,10 +28,9 @@ sleep 1
 echo -e "[ ${green}INFO${NC} ] Starting Install NS Cert.... " 
 sleep 1
 ns_domain_cloudflare() {
-	domain=$(cat /etc/xray/domain)
 	DOMAIN="makhlukvpn.my.id"
 	DOMAIN_PATH=$(cat /etc/xray/domain)
-	NS_DOMAIN=ns-${domain}
+	NS_DOMAIN=ns-${DOMAIN}
 	CF_ID=makhlukvpn@gmail.com
         CF_KEY=1e1fd5209818f9492309a6c60b94e1df4340f
 	set -euo pipefail
