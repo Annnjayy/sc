@@ -14,12 +14,66 @@ echo > /dev/null 2>&1
 else
 echo "Start Configuration"
 sleep 0.5
-wondershaper -a $NIC -d $down -u $up > /dev/null 2>&1
+wondershaper -a $IFACE -d $down -u $up > /dev/null 2>&1
+cat > /etc/systemd/wondershaper.conf << END
+[wondershaper]
+
+# Adapter
+IFACE="$IFACE"
+
+# Download rate in Kbps
+DSPEED="$down"
+
+# Upload rate in Kbps
+USPEED="$up"
+
+### Separate items by whitespace:
+ 
+#HIPRIODST=(IP1 IP2)
+HIPRIODST=()
+ 
+COMMONOPTIONS=()
+ 
+# low priority OUTGOING traffic - you can leave this blank if you want
+# low priority source netmasks
+NOPRIOHOSTSRC=(80);
+ 
+# low priority destination netmasks
+NOPRIOHOSTDST=();
+ 
+# low priority source ports
+NOPRIOPORTSRC=();
+ 
+# low priority destination ports
+NOPRIOPORTDST=();
+ 
+### EOF
+END
+cat > /etc/systemd/system/wondershaper.service << END
+[Unit]
+Description=Bandwidth-Limit
+Documentation=https://t.me/MakhlukVpn
+After=syslog.target network-online.target
+[Service]
+User=root
+NoNewPrivileges=true
+ExecStart=/usr/local/sbin/wondershaper -a $IFACE -d $down -u $up
+Restart=on-failure
+RestartPreventExitStatus=23
+LimitNPROC=10000
+LimitNOFILE=1000000
+[Install]
+WantedBy=multi-user.target
+END
+
+systemctl daemon-reload
 systemctl enable --now wondershaper.service
+sleep 0.5
 echo "start" > /home/limit
 echo "Done"
-echo "Reboot Vps...."
-sleep 0.5
+
+read -n 1 -s -r -p "Press [ Enter ] to back on menu"
+menu
 fi
 }
 function stop () {
@@ -29,6 +83,8 @@ echo "Stop Configuration"
 sleep 0.5
 echo > /home/limit
 echo "Done"
+read -n 1 -s -r -p "Press [ Enter ] to back on menu"
+menu
 }
 if [[ "$cek" = "start" ]]; then
 sts="${Info}"
